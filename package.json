@@ -2,9 +2,13 @@
   "name": "pomogranate",
   "version": "1.0.0",
   "description": "My pomodoro timer",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"cd frontend && npm run dev\" \"electron .\"",
+    "build-main": "tsc",
+    "package": "npm run build-main && electron-packager . MyElectronApp --platform=darwin,win32 --arch=x64 --out=dist",
+    "dev": "tsc && electron ."
   },
   "repository": {
     "type": "git",
@@ -18,6 +22,12 @@
   },
   "homepage": "https://github.com/pomegranar/pomogranate#readme",
   "devDependencies": {
-    "electron": "^34.1.1"
+    "@types/electron": "^1.6.12",
+    "@types/node": "^22.13.1",
+    "electron": "^34.1.1",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "electron-packager": "^17.1.2"
   }
 }
