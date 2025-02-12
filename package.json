@@ -1,5 +1,6 @@
 {
   "name": "pomogranate",
+  "productName": "Pomogranate",
   "version": "1.0.0",
   "description": "A very nice pomodoro timer.",
   "main": "main.js",

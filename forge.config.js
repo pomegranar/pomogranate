@@ -5,7 +5,7 @@ const path = require("node:path");
 module.exports = {
   packagerConfig: {
     asar: true,
-    icon: path.resolve(__dirname, 'assets', 'pomo-logo', 'pomo-logo-1024'),
+    icon: path.resolve(__dirname, 'assets', 'pomo-logo', 'pomo'),
   },
   rebuildConfig: {},
   makers: [
@@ -13,14 +13,14 @@ module.exports = {
       name: '@electron-forge/maker-squirrel',
       config: {
         iconUrl: 'https://github.com/pomegranar/pomogranate/blob/main/assets/pomo-logo/pomo-logo-fancy.ico',
-        setupIcon: path.join(__dirname, 'assets', 'pomo-logo', 'pomo-logo-fancy.ico'),
+        setupIcon: path.join(__dirname, 'assets', 'pomo-logo', 'pomo.ico'),
       },
     },
     {
       name: '@electron-forge/maker-zip',
       platforms: ['darwin'],
       config: {
-        icon: path.join(__dirname, 'assets', 'pomo-logo', 'pomo-mac-icon.icns'),
+        icon: path.join(__dirname, 'assets', 'pomo-logo', 'pomo.icns'),
       }
     },
     {
