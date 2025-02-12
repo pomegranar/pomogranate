@@ -1,0 +1,265 @@
+/* Only show titleBar on Windows */
+.titleBar {
+    /*TODO: uncomment the following line before prod.*/
+    /*display: none;*/
+    display: flex;
+    height: 32px;
+    background: #e87878;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-app-region: drag;
+    app-region: drag;  /* Add this as well */
+    z-index: 9999;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Windows-specific styles */
+.win32 .titleBar {
+    display: flex;
+}
+
+.window-controls {
+    display: flex;
+    -webkit-app-region: no-drag; /* Allow button clicks */
+    app-region: no-drag;
+}
+
+.window-controls button {
+    width: 46px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.window-controls button:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+#minimize-btn:hover {
+    background: #f39d9d;
+}
+
+#maximize-btn:hover {
+    background: #f39d9d;
+}
+
+#close-btn:hover {
+    background: #E81123;
+}
+
+/* SVG icons */
+.window-controls svg {
+    width: 10px;
+    height: 10px;
+    fill: #fff;
+}
+
+/* Main content padding to account for titleBar */
+.win32 .content {
+    padding-top: 32px;
+}
+
+.content {
+    -webkit-app-region: no-drag;
+    app-region: no-drag;
+}
+
+body {
+    background-color: #fdf6f0;
+    font-family: "Segoe Script", "Lucida Handwriting", cursive;
+}
+
+.windowTitle {
+    color: white;
+    padding-left: 8px;
+    /*font-family: cursive;*/
+}
+
+.fillWidth {
+    display: flex;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    /*font-family: cursive;*/
+    color: #fa6b7b;
+    font-weight: bolder;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+h2{
+    text-align: left;
+    color: #3e1a39;
+    font-weight: normal;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    line-height: 2.3rem;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.moreSpacing {
+    line-height: 5rem;
+}
+
+.choices {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.choice {
+    padding: 2rem 5rem;
+    border-radius: 50%;
+}
+
+ul {
+    list-style-type: lower-roman;
+    /*font-family: cursive;*/
+    font-size: 1.3rem;
+}
+
+
+
+/*--------BUTTONS---------*/
+
+:root {
+    --bg: #fff;
+    --text: #382b22;
+    --light-pink: #fff0f0;
+    --pink: #ffdbe9;
+    --dark-pink: #f9c4d2;
+    --pink-border: #b18597;
+    --pink-shadow: #ffe3e2;
+    --danger: #fd6373;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button.learn-more {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--text);
+    text-transform: uppercase;
+    padding: 1.25em 2em;
+    background: var(--light-pink);
+    border: 2px solid var(--pink-border);
+    border-radius: 0.75em;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+    background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.learn-more::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--dark-pink);
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px var(--pink-border),
+    0 0.625em 0 0 var(--pink-shadow);
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+    box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+    cursor: pointer;
+}
+
+button.learn-more:hover {
+    background: var(--pink);
+    transform: translate(0, 0.25em);
+}
+
+#nah {
+    position: relative;
+    cursor: pointer;
+}
+#nah::after {
+    content: "YESSS!!!";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+#nah:hover::after {
+    opacity: 1;
+    color: #382b22;
+}
+#nah:hover {
+    color: transparent;
+}
+
+button.learn-more:hover::before {
+    box-shadow: 0 0 0 2px var(--pink-border),
+    0 0.5em 0 0 var(--pink-shadow);
+    transform: translate3d(0, 0.5em, -1em);
+}
+
+button.learn-more:active {
+    background: var(--pink);
+    transform: translate(0em, 0.75em);
+}
+
+button.learn-more:active::before {
+    box-shadow: 0 0 0 2px var(--pink-border),
+    0 0 var(--pink-shadow);
+    transform: translate3d(0, 0, -1em);
+}
+
+.sticker {
+    width: 4rem;
+}
+
+.bigSticker {
+    width: 7rem;
+}

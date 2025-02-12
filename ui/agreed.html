@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <meta http-equiv="content-security-policy" content="default-src 'self'; script-src 'self'" />
+    <title>Pomogranate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="titleBar">
+    <p class="windowTitle">😍 It's a deal!</p>
+    <div class="window-controls">
+        <button id="minimize-btn">
+            <svg><path d="M0 5h10v1H0z"/></svg>
+        </button>
+        <button id="maximize-btn">
+            <svg><path d="M0 0v10h10V0H0zm1 1h8v8H1V1z"/></svg>
+        </button>
+        <button id="close-btn">
+            <svg><path d="M0 0.9L0.9 0L5 4.1L9.1 0L10 0.9L5.9 5L10 9.1L9.1 10L5 5.9L0.9 10L0 9.1L4.1 5L0 0.9z"/></svg>
+        </button>
+    </div>
+</div>
+<div class="moreSpacing">
+    <br>
+    <h1>♡ You're now my VALENTINE!!! ♡</h1>
+    <h1><img class="bigSticker" src="../assets/stickers/loopy-holding-heart.png" alt="Loopy sticker"></h1>
+    <h2>I knew I could always count on you🥹</h2>
+    <br />
+    <h1>Here are some super fun activities we can do on Valentine's Day:</h1>
+    <ul>
+        <li>
+            Vogue photo shoot📸
+        </li>
+        <li>
+            Fancy dinner🍽️
+        </li>
+        <li>
+            Watch a romance movie while eating chocolate-dipped strawberries🍫🍓
+        </li>
+    </ul>
+</div>
+<br>
+<footer>
+    <br>
+    <p><br></p>
+    <br>
+</footer>
+<script src="renderer.js"></script>
+<script src="heartRain.js" defer></script>
+<!-- Do not use type="module". -->
+</body>
+</html>

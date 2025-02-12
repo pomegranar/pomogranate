@@ -1,0 +1,15 @@
+{
+  "name": "Smiski",
+  "colors": {
+    "--color-long-round": "#D9DFAE",
+    "--color-short-round": "##C6F6BD",
+    "--color-focus-round": "##6DC58B",
+    "--color-background": "#2F476E",
+    "--color-background-light": "#2e5ca6",
+    "--color-background-lightest": "#1854b5",
+    "--color-foreground": "#F3FFB1",
+    "--color-foreground-darker": "#CAF2C5",
+    "--color-foreground-darkest": "#6bb562",
+    "--color-accent": "#B43A3B"
+  }
+}
