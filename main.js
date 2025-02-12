@@ -1,4 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
+if (require('electron-squirrel-startup')) app.quit();
+
 const path = require("path");
 
 ipcMain.on('navigate-to-page', (event) => {
@@ -50,7 +52,17 @@ const createWindow = () => {
 
 app.whenReady().then(() => {
 	createWindow();
+	app.on('activate', () => {
+		if (BrowserWindow.getAllWindows().length === 0) {
+			createWindow()
+		}
+	})
 });
 
+app.on('window-all-closed', () => {
+	if (process.platform !== 'darwin') {
+		app.quit()
+	}
+})
 // const { ipcMain, BrowserWindow } = require('electron');
 
