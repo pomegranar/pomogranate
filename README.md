@@ -1,2 +1,0 @@
-# pomogranate
-My pomodoro timer 
