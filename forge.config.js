@@ -12,7 +12,7 @@ module.exports = {
     {
       name: '@electron-forge/maker-squirrel',
       config: {
-        iconUrl: 'https://github.com/pomegranar/pomogranate/blob/main/assets/pomo-logo/pomo-logo-fancy.ico',
+        iconUrl: 'https://github.com/pomegranar/pomogranate/blob/main/assets/pomo-logo/pomo.ico',
         setupIcon: path.join(__dirname, 'assets', 'pomo-logo', 'pomo.ico'),
       },
     },
